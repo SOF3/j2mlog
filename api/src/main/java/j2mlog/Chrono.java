@@ -15,7 +15,7 @@ public class Chrono {
      * @param seconds the number of seconds to sleep for.
      *                May be non-integer.
      */
-    public static void sleep(float seconds) {
+    public static void sleep(double seconds) {
         double instructionsPerSecond = Processor.currentIpt() * 60.0;
         int instructionsToRun = (int) (instructionsPerSecond * seconds / 2.0);
 
