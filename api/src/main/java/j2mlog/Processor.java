@@ -8,28 +8,28 @@ public class Processor {
      * Returns the building representing the current processor
      */
     @NotNull
-    public static Building currentProcessor() {
+    public static Building current() {
         return (Building) Intrinsics.value("@this");
     }
 
     /**
      * Returns the X-coordinate of the current processor
      */
-    public static int currentProcessorX() {
+    public static int currentX() {
         return (int) Intrinsics.value("@thisx");
     }
 
     /**
      * Returns the Y-coordinate of the current processor
      */
-    public static int currentProcessorY() {
+    public static int currentY() {
         return (int) Intrinsics.value("@thisy");
     }
 
     /**
      * Number of instructions executed by the current processor
      */
-    public static int currentProcessorIpt() {
+    public static int currentIpt() {
         return (int) Intrinsics.value("@ipt");
     }
 }

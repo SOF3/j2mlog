@@ -37,4 +37,17 @@ public class Intrinsics {
     @Unsafe
     @FlowInterrupting
     public static native void relativeJump(@Literal int diff, @Literal String jumpCondition, Object operand1, Object operand2);
+
+    /**
+     * Declares a global variable with a fixed name without assigning a value.
+     * Reading the variable may produce null or the latent value from the previoius run.
+     */
+    @Unsafe
+    public static native Object declareGlobal(@Literal String name);
+
+    /**
+     * Declares a global variable with a fixed name and fixed value.
+     */
+    @Unsafe
+    public static native Object assignGlobal(@Literal String name, Object value);
 }
